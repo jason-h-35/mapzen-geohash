@@ -3,12 +3,12 @@ from distutils.core import setup
 import mzgeohash
 
 setup(
-  name='mzgeohash',
+  name='mz2geohash',
   version=mzgeohash.__version__,
   description='Mapzen Geohash',
-  author='Ian Rees',
-  author_email='ian@mapzen.com',
-  url='https://github.com/transitland/mapzen-geohash',
+  author='Jason Hatton',
+  author_email='jason@hatton.io',
+  url='https://github.com/jason-h-simplifi/mapzen-geohash',
   license='License :: OSI Approved :: MIT License',
   packages=['mzgeohash']
 )
