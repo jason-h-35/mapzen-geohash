@@ -6,7 +6,7 @@ import glob
 import os
 import json
 
-import geohash
+from mz2geohash import geohash
 
 class Test_encode_decode(unittest.TestCase):
   test_geohashes = [
