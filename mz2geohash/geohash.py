@@ -18,7 +18,7 @@ def _bits_to_float(bits, lower=-90.0, middle=0.0, upper=90.0):
 def _float_to_bits(value, lower=-90.0, middle=0.0, upper=90.0, length=15):
   """Convert a float to a list of GeoHash bits."""
   ret = []
-  for _ in range(int(length)):
+  for _ in range(length):
     if value >= middle:
       lower = middle
       ret.append(1)
@@ -71,7 +71,7 @@ def encode(lonlat, length=12):
   """Encode a (lon,lat) pair to a GeoHash."""
   assert len(lonlat) == 2, "Invalid lon/lat: %s"%lonlat
   # Half the length for each component.
-  length /= 2
+  length //= 2
   lon = _float_to_bits(lonlat[0], lower=-180.0, upper=180.0, length=length*5)
   lat = _float_to_bits(lonlat[1], lower=-90.0, upper=90.0, length=length*5)
   # Zip the GeoHash bits.
