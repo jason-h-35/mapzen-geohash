@@ -18,7 +18,7 @@ def _bits_to_float(bits, lower=-90.0, middle=0.0, upper=90.0):
 def _float_to_bits(value, lower=-90.0, middle=0.0, upper=90.0, length=15):
   """Convert a float to a list of GeoHash bits."""
   ret = []
-  for i in range(length):
+  for i in range(int(length)):
     if value >= middle:
       lower = middle
       ret.append(1)
