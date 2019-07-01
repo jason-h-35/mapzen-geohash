@@ -17,10 +17,10 @@ This Python package contains simple tools for encoding and decoding geohashes.
 Installation using pip:
 
 ```
-pip install mzgeohash
+pip install mz2geohash
 ```
 
-Alternatively, [download from PyPi](https://pypi.python.org/pypi/mzgeohash) or clone this repository, and install using setup.py:
+Alternatively, [download from PyPi](https://pypi.python.org/pypi/mz2geohash) or clone this repository, and install using setup.py:
 
 ```
 python ./setup.py install
@@ -29,12 +29,12 @@ python ./setup.py install
 ## Example usage
 
 ```
->>> import mzgeohash
->>> mzgeohash.decode('xn76urwe1g9y')
+>>> import mz2geohash
+>>> mz2geohash.decode('xn76urwe1g9y')
 (139.76608408614993, 35.681382017210126)
->>> mzgeohash.encode((139.76608408614993, 35.681382017210126))
+>>> mz2geohash.encode((139.76608408614993, 35.681382017210126))
 'xn76urwe1g9y'
->>> mzgeohash.neighbors('xn76urwe1g9y')
+>>> mz2geohash.neighbors('xn76urwe1g9y')
 {'c': 'xn76urwe1g9y',
  'e': 'xn76urwe1gdn',
  'n': 'xn76urwe1g9z',
@@ -45,11 +45,3 @@ python ./setup.py install
  'sw': 'xn76urwe1g9t',
  'w': 'xn76urwe1g9w'}
 ```
-
-## Contributing
-
-Please [open a Github issue](https://github.com/transitland/mapzen-geohash/issues/new) with as much of the following information as you're able to specify, or [contact us](#contact) for assistance.
-
-## Contact
-
-Transitland is sponsored by [Mapzen](http://mapzen.com). Contact us with your questions, comments, or suggests: [hello@mapzen.com](mailto:hello@mapzen.com).
