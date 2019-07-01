@@ -1,3 +1,4 @@
+import setuptools
 from distutils.core import setup
 
 import mz2geohash
