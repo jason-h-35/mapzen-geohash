@@ -28,7 +28,7 @@ class Test_encode_decode(unittest.TestCase):
       self.assertAlmostEqual(value[1], expect[1])
       
   def test_roundtrip(self):
-    for test, expect in self.test_geohashes:
+    for test, _ in self.test_geohashes:
       encoded = geohash.decode(test)
       decoded = geohash.encode(encoded)
       assert test == decoded
