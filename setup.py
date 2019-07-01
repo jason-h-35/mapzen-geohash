@@ -4,7 +4,7 @@ import mz2geohash
 
 setup(
   name='mz2geohash',
-  version=mzgeohash.__version__,
+  version=mz2geohash.__version__,
   description='Mapzen Geohash Fork.  The original is long unmaintained.',
   author='Jason Hatton',
   author_email='jason@hatton.io',
