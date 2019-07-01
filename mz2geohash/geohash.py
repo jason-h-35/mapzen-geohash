@@ -30,7 +30,7 @@ def _float_to_bits(value, lower=-90.0, middle=0.0, upper=90.0, length=15):
 
 def _geohash_to_bits(value):
   """Convert a GeoHash to a list of GeoHash bits."""
-  b = map(BASE32MAP.get, value)
+  b = list(map(BASE32MAP.get, value))
   ret = []
   for i in b:
     out = []
@@ -44,7 +44,7 @@ def _bits_to_geohash(value):
   """Convert a list of GeoHash bits to a GeoHash."""
   ret = []
   # Get 5 bits at a time
-  for i in (value[i:i+5] for i in xrange(0, len(value), 5)):
+  for i in (value[i:i+5] for i in range(0, len(value), 5)):
     # Convert binary to integer
     # Note: reverse here, the slice above doesn't work quite right in reverse.
     total = sum([(bit*2**count) for count,bit in enumerate(i[::-1])])
@@ -123,7 +123,7 @@ def neighbors(geohash):
 
 def neighborsfit(centroid, points):
   centroid = encode(centroid)
-  points = map(encode, points)
+  points = list(map(encode, points))
   for i in range(1, len(centroid)):
     g = centroid[0:i]
     n = set(neighbors(g).values())
